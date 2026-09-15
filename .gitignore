@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+.env
+*.env
+
+# Large data — keep test.jsonl + custom examples, ignore raw + train/eval splits
+data/raw/
+data/processed/train.jsonl
+data/processed/eval.jsonl
+
+# Model artifacts — push to HF Hub instead
+*.bin
+*.safetensors
+*.pt
+*.pth
+checkpoints/
+merged_model/
+
+# Chroma vector DB — built at runtime from rag_docs/
+rag_docs/chroma_db/
+chroma_db/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+secrets.json
+
+# Weights & Biases logs
+wandb/
+*.gguf
