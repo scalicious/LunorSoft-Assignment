@@ -1,0 +1,123 @@
+{
+  "config": {
+    "use_rag": true,
+    "use_reranker": true
+  },
+  "avg_latency_sec": 40.61,
+  "syntax_pass_rate": 100.0,
+  "citation_precision": 80.0,
+  "test_cases": [
+    {
+      "id": "TC_01",
+      "category": "Algorithms",
+      "prompt": "Write a C++ function to detect a cycle in a linked list using Floyd's Tortoise and Hare algorithm.",
+      "latency_sec": 60.6,
+      "keyword_coverage": 1.0,
+      "valid_syntax": null,
+      "has_citation": true,
+      "citations_found": [
+        {
+          "file": "cpp_guide.md",
+          "section": "General"
+        },
+        {
+          "file": "cpp_guide.md",
+          "section": "General"
+        },
+        {
+          "file": "data_structures_advanced.md",
+          "section": "General"
+        }
+      ],
+      "response_preview": "# Cycle Detection in Linked List Using Floyd's Tortoise and Hare Algorithm\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nstruct ListNode {\n    int val;\n    ListNode* next;\n    ListNode(int x) : va..."
+    },
+    {
+      "id": "TC_02",
+      "category": "Algorithms",
+      "prompt": "Solve the Aggressive Cows problem using binary search on answer in C++.",
+      "latency_sec": 26.91,
+      "keyword_coverage": 1.0,
+      "valid_syntax": null,
+      "has_citation": true,
+      "citations_found": [
+        {
+          "file": "data_structures_advanced.md",
+          "section": "General"
+        },
+        {
+          "file": "cpp_guide.md",
+          "section": "General"
+        },
+        {
+          "file": "cpp_guide.md",
+          "section": "General"
+        }
+      ],
+      "response_preview": "# Aggressive Cows Problem\n\n**Core Idea:** Binary Search on Answer Space.\n\n```cpp\n#include <vector>\n#include <algorithm>\n\n// Function to check if cows can be placed with at least 'dist' distance apart\n..."
+    },
+    {
+      "id": "TC_03",
+      "category": "Machine Learning",
+      "prompt": "Explain LoRA (Low-Rank Adaptation) and how rank decomposition works mathematically.",
+      "latency_sec": 29.32,
+      "keyword_coverage": 0.5,
+      "valid_syntax": null,
+      "has_citation": true,
+      "citations_found": [
+        {
+          "file": "ml_fundamentals.md",
+          "section": "General"
+        },
+        {
+          "file": "cpp_guide.md",
+          "section": "General"
+        },
+        {
+          "file": "ml_fundamentals.md",
+          "section": "General"
+        }
+      ],
+      "response_preview": "# Low-Rank Adaptation (LoRA): Simplified Fine-Tuning via Matrix Decomposition\n\n**Core Idea:** Instead of updating all model weights, inject small trainable matrices into specific layers.\n\n```cpp\n// St..."
+    },
+    {
+      "id": "TC_04",
+      "category": "Python Built-ins",
+      "prompt": "How does python's enumerate function work and what is its syntax?",
+      "latency_sec": 34.48,
+      "keyword_coverage": 1.0,
+      "valid_syntax": true,
+      "has_citation": true,
+      "citations_found": [
+        {
+          "file": "python_builtins.md",
+          "section": "Python Built-in Functions > enumerate()"
+        }
+      ],
+      "response_preview": "**enumerate()**\nConverts a collection into an iterable object that produces tuples of index and value.\n\n**Syntax:**\n```python\nenumerate(iterable, start=0)\n```\n- `iterable`: The sequence (e.g., list) t..."
+    },
+    {
+      "id": "TC_05",
+      "category": "Data Structures",
+      "prompt": "Write a python function to check if a binary tree is symmetric.",
+      "latency_sec": 51.75,
+      "keyword_coverage": 1.0,
+      "valid_syntax": true,
+      "has_citation": false,
+      "citations_found": [
+        {
+          "file": "data_structures_advanced.md",
+          "section": "General"
+        },
+        {
+          "file": "system_design.md",
+          "section": "General"
+        },
+        {
+          "file": "data_structures_advanced.md",
+          "section": "General"
+        }
+      ],
+      "response_preview": "1. **Title:** Symmetric Binary Tree Check\n\n2. **Code Block:**\n    ```python\n    class TreeNode:\n        def __init__(self, val=0, left=None, right=None):\n            self.val = val\n            self.le..."
+    }
+  ]
+}
