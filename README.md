@@ -18,7 +18,6 @@
 4. [RAG Innovations & Engineering Design](#-rag-innovations--engineering-design)
 5. [Evaluation & Benchmark Results](#-evaluation--benchmark-results)
 6. [Quickstart & Setup Guide](#-quickstart--setup-guide)
-7. [Technical Interview Defense Guide (FAQ)](#-technical-interview-defense-guide-faq)
 
 ---
 
