@@ -7,7 +7,7 @@
 [![Model](https://img.shields.io/badge/LLM-Qwen2.5--Coder--7B%20%2F%201.5B--LoRA-red.svg)](https://huggingface.co/Qwen)
 [![License](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-> **Kuli AI** is an enterprise-grade AI coding copilot and computer science tutor designed specifically for engineering students and software developers. It bridges the gap between raw LLM generation and production reliability by combining **Unsloth QLoRA Fine-Tuning** with an **Advanced RAG Pipeline featuring Code-Specific AST Chunking, Cross-Encoder Reranking for "Lost in the Middle" mitigation, and Enforced Citation Grounding.**
+> **Kuli AI is an AI coding copilot and computer science tutor designed specifically for engineering students and software developers. It bridges the gap between raw LLM generation and production reliability by combining **Unsloth QLoRA Fine-Tuning.****
 
 ---
 
