@@ -78,7 +78,7 @@ KuliSoft-Assignment/
 ├── Makefile                      # Standardized build commands (setup, index, run, eval)
 ├── run.sh                        # One-click startup script
 ├── requirements.txt              # Categorized project dependencies
-├── generate_custom_dataset.py    # Generates 600 synthetic educational QA training pairs
+├── generate_custom_dataset.py    # Generates 600 synthetic educational training pairs
 │
 ├── data/
 │   ├── processed/                # Preprocessed train.jsonl (500) and eval.jsonl (100)
@@ -106,14 +106,14 @@ KuliSoft-Assignment/
 │   │   └── core_engine.py        # Full LangChain LCEL pipeline
 │   │
 │   ├── app/
-│   │   ├── app.py                # Modern IDE-grade Streamlit web interface
+│   │   ├── app.py                # Streamlit web interface
 │   │   └── inference.py          # Dynamic Ollama LCEL inference engine
 │   │
 │   └── evaluation/
 │       └── evaluate.py           # Automated evaluation suite (Syntax, ROUGE, Latency)
 │
 └── results/
-    └── evaluation_report.json    # Quantitative benchmark metrics
+    └── evaluation_report.json    # benchmark metrics
 ```
 
 ---
@@ -126,7 +126,7 @@ Standard text chunkers split text purely based on character count (`len()`), whi
 - **Metadata Tagging:** Every chunk is tagged with its filename, section hierarchy, language, and character count to support structured provenance.
 
 ### 2. "Lost in the Middle" Mitigation
-Research by Liu et al. (*Lost in the Middle: How Language Models Use Long Contexts*) shows that transformer attention is heavily biased toward the beginning (primacy effect) and end (recency effect) of the context window. Information placed in the middle 60% experiences up to a **40% drop in retrieval recall**.
+(*Lost in the Middle: How Language Models Use Long Contexts*) shows that transformer attention is heavily biased toward the beginning (primacy effect) and end (recency effect) of the context window. Information placed in the middle 60% experiences up to a **40% drop in retrieval recall**.
 - **Our Solution:** `src/rag/reranker.py` executes a two-stage retrieval. After dense vector search retrieves top-10 candidates, a **Cross-Encoder** (`cross-encoder/ms-marco-MiniLM-L-6-v2`) evaluates all candidate pairs using full cross-attention. The chunks are reordered such that the most critical snippet is placed at **Index 0** (the absolute top, directly adjacent to the instruction).
 
 ### 3. Enforced Citation Grounding
