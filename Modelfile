@@ -1,0 +1,1 @@
+FROM ./kuli-qwen-7b-unsloth.Q4_K_M.gguf
